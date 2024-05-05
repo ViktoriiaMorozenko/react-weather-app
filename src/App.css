@@ -1,0 +1,11 @@
+footer{
+  font-family: cursive;
+  font-size: 14px;
+  margin: 45px 0 10px;
+  text-align: center;
+  color: #3a4750;
+}
+
+a {
+  color: rgb(125, 82, 240);
+}
