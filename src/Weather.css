@@ -41,6 +41,11 @@ h1 {
   opacity: 0.8;
 }
 
+ul{
+    opacity: 0.9;
+    line-height: 1.2;
+}
+
 li {
     color: #3a4750;
     list-style-type: none
