@@ -20,14 +20,14 @@ export default function Weather() {
       </div>
       <div className="row">
         <div className="col-6">
+            <h1>London</h1>
           <ul>
-            <li>London</li>
             <li>Sunday 21:28, few clouds</li>
-            <li>Humidity: 80%, Wind: 1.54km/h</li>
+            <li>Humidity: <span className="measures">80%</span>, Wind: <span className="measures">1.54km/h</span></li>
           </ul>
         </div>
 
-        <div className="col-6">
+        <div className="col-6 exactTemperature">
           <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png" />
           13°C
         </div>

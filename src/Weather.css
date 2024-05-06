@@ -17,7 +17,7 @@ body {
   background-color: rgb(247, 245, 251);
   border: none;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   padding: 15px;
   box-sizing: border-box;
   margin-top: 6px;
@@ -31,4 +31,31 @@ input[type="submit"] {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+}
+
+h1 {
+  font-family: cursive;
+  color: #303841;
+  font-weight: bold;;
+  margin: 22px 30px;
+  opacity: 0.8;
+}
+
+li {
+    color: #3a4750;
+    list-style-type: none
+}
+
+li .measures{
+    color: #be3144;
+    font-weight: bold;
+}
+
+.exactTemperature {
+    display: block;
+    margin: auto 0;
+    font-family: cursive;
+    font-size: 60px;
+    color: #303841;
+    opacity: 0.8;
 }
