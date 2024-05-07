@@ -57,11 +57,29 @@ li .measures {
 }
 
 .exactTemperature {
-  display: block;
-  margin: 0 auto;
-  padding: 30px 0 0 65px;
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
   font-family: cursive;
   font-size: 60px;
   color: #303841;
   opacity: 0.8;
+}
+
+.exactTemperature .weatherIcon{
+  font-size: 52px;
+  padding: 12px;
+}
+
+.Weather .unit {
+  color: #303841;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  line-height: 1;
+  top: -28px;
+}
+
+a {
+  text-decoration: none;
 }
