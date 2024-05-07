@@ -1,13 +1,22 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import "./FormattedDate.js";
+import FormattedDate from "./FormattedDate.js";
 
-export default function Weather() {
+export default function Weather(props) {
   const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState(null);
   function handleResponse(response) {
-    console.log(response.data);
-    setTemperature(response.data.main.temp);
+    setWeatherData({
+      city: response.data.name,
+      date: new Date(response.data.dt * 1000),
+      description: response.data.weather[0].description,
+      wind: response.data.wind.speed,
+      humidity: response.data.main.humidity,
+      temperature: response.data.main.temp,
+    });
+    setReady(true);
   }
 
   if (ready) {
@@ -31,10 +40,14 @@ export default function Weather() {
           <div className="col-6">
             <h1>London</h1>
             <ul>
-              <li>Sunday 21:28, few clouds</li>
               <li>
-                Humidity: <span className="measures">80%</span>, Wind:{" "}
-                <span className="measures">1.54km/h</span>
+                <FormattedDate date={weatherData.date} />,{" "}
+                {weatherData.description}
+              </li>
+              <li>
+                Humidity:{" "}
+                <span className="measures">{weatherData.humidity}%</span>, Wind:{" "}
+                <span className="measures">{weatherData.wind}km/h</span>
               </li>
             </ul>
           </div>
@@ -44,16 +57,17 @@ export default function Weather() {
               src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-night.png"
               alt=""
             />
-            13°C
+            {Math.round(weatherData.temperature)}°C
           </div>
         </div>
       </div>
     );
   } else {
-    const apiKey = "af263868fba123db051ft28a00754f7o";
-    let city = "London";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    const apiKey = "b2d9fa1f2b35557e4615dd5fab218834";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${props.defaultCity}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
+
+    return "loading..";
   }
 }

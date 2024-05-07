@@ -1,11 +1,11 @@
-import './App.css';
-import './Weather.js';
-import Weather from './Weather.js';
+import "./App.css";
+import "./Weather.js";
+import Weather from "./Weather.js";
 
 export default function App() {
   return (
     <div className="App">
-      <Weather />
+      <Weather defaultCity="London" />
       <footer>
         The progect was coded by{" "}
         <a

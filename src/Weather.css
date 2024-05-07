@@ -36,31 +36,31 @@ input[type="submit"] {
 h1 {
   font-family: cursive;
   color: #303841;
-  font-weight: bold;;
+  font-weight: bold;
   margin: 22px 30px;
   opacity: 0.8;
 }
 
-ul{
-    opacity: 0.9;
-    line-height: 1.2;
+ul {
+  opacity: 0.9;
+  line-height: 1.2;
 }
 
 li {
-    color: #3a4750;
-    list-style-type: none
+  color: #3a4750;
+  list-style-type: none;
 }
 
-li .measures{
-    color: #be3144;
-    font-weight: bold;
+li .measures {
+  color: #be3144;
+  font-weight: bold;
 }
 
 .exactTemperature {
-    display: block;
-    margin: auto 0;
-    font-family: cursive;
-    font-size: 60px;
-    color: #303841;
-    opacity: 0.8;
+  display: block;
+  margin: auto 0;
+  font-family: cursive;
+  font-size: 60px;
+  color: #303841;
+  opacity: 0.8;
 }
