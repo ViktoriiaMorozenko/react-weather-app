@@ -1,0 +1,23 @@
+.WeatherForecast {
+  text-align: center;
+}
+
+.WeatherForecastDay {
+  font-family: cursive;
+  color: rgb(125, 82, 240);
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.WeatherForecasttemperatures{
+  font-size: 13;
+  text-align: center;
+  color: #be3144;
+  margin-top: 15px;
+}
+
+.WeatherForecastTemperatureMax {
+  font-weight: bold;
+}
