@@ -9,9 +9,10 @@
   font-weight: bold;
   opacity: 0.9;
   margin-bottom: 15px;
+  padding-top: 30px;
 }
 
-.WeatherForecasttemperatures{
+.WeatherForecasttemperatures {
   font-size: 13;
   text-align: center;
   color: #be3144;
